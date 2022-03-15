@@ -1,0 +1,50 @@
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: cp-jobs
+  description: Background job service
+  annotations:
+    backstage.io/techdocs-ref: dir:./
+  tags:
+    - background
+    - go
+  links:
+    - url: https://example.com/user
+      title: Examples Users
+      icon: user
+spec:
+  type: service
+  lifecycle: production
+  owner: sre
+  system: control-plane
+  dependsOn: ["resource:couchbase"]
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: cp-api
+  description: Client facing API for the Capella UI
+  annotations:
+    backstage.io/techdocs-ref: dir:./
+  tags:
+    - api
+    - go
+spec:
+  type: openapi
+  lifecycle: production
+  owner: platform
+  system: control-plane
+  definition:
+    $text: https://github.com/APIs-guru/openapi-directory/blob/dab6854d4d599aafb0eb36e6c7ae1fe0c37509b7/APIs/spotify.com/2021.4.2/openapi.yaml
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: couchbase
+  description: Internal database
+spec:
+  type: database
+  lifecycle: production
+  owner: platform
+  system: control-plane
