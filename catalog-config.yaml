@@ -6,7 +6,7 @@ metadata:
   description: Background job service
   annotations:
     backstage.io/techdocs-ref: dir:./docs/cp-jobs
-    github.com/project-slug: backstage-poc
+    github.com/project-slug: Shonei/backstage-poc
   tags:
     - background
     - go
