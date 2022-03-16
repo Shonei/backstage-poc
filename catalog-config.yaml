@@ -5,7 +5,7 @@ metadata:
   name: cp-jobs
   description: Background job service
   annotations:
-    backstage.io/techdocs-ref: dir:./
+    backstage.io/techdocs-ref: dir:./docs/cp-jobs
   tags:
     - background
     - go
