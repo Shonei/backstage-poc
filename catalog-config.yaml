@@ -7,6 +7,9 @@ metadata:
   annotations:
     backstage.io/techdocs-ref: dir:./docs/cp-jobs
     github.com/project-slug: Shonei/backstage-poc
+    jira/project-key: AV
+    # jira/component: <example-component> 
+    jira/token-type: Bearer
   tags:
     - background
     - go
